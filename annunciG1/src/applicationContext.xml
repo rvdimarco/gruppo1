@@ -29,6 +29,13 @@
 	<bean id="col" class="it.geek.annunci.util.Collezioni">
 		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
 	</bean>
+	
+	<bean id="cdao" class="it.geek.annunci.dao.CategoriaDAO" />
+	<bean id="cservice" class="it.geek.annunci.service.CategoriaService">
+		<property name="categoriaDAO">
+			<ref bean="cdao" />
+		</property>
+	</bean>	
 		
 	<!--======================================================================-->
 	<!-- 				Transaction management	                              -->

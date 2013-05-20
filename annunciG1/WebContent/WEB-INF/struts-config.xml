@@ -8,6 +8,9 @@
 
 		<form-bean name="annunciForm"
 				   type="it.geek.annunci.form.GestioneAnnunciForm" />
+				   
+		<form-bean name="categorieForm"
+				   type="it.geek.annunci.form.GestioneCategorieForm" />
 
 	</form-beans>
 
@@ -20,6 +23,17 @@
 				parameter="method">
 
 			<forward name="dettagli" path="/dettagli.jsp"/>
+			<forward name="failure" path="/error.jsp"/>
+
+		</action>
+		
+		<action path="/categorieForm"
+				name="categorieForm"
+				scope="request"
+				type="it.geek.controller.GestioneCategorieAction"
+				parameter="method">
+
+			<forward name="success" path="/home.jsp"/>
 			<forward name="failure" path="/error.jsp"/>
 
 		</action>
