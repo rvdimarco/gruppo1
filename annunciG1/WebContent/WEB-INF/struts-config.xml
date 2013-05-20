@@ -19,6 +19,7 @@
 				type="it.geek.controller.GestioneAnnunciAction"
 				parameter="method">
 				
+							
 			<forward name="failure" path="/error.jsp"/>
 
 		</action>
