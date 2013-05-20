@@ -1,5 +1,7 @@
 package it.geek.annunci.form;
 
+import it.geek.annunci.model.Categoria;
+import it.geek.annunci.model.Prodotto;
 import it.geek.annunci.util.Collezioni;
 import it.geek.annunci.util.CollezioniFactory;
 
@@ -13,14 +15,15 @@ public class GestioneAnnunciForm extends ActionForm {
 	
 	private int id;
 	private String descrizione;
-	private Date dataInserimento;
+	private String dataInserimento;
 	private int visite;
 	private int stato;
-	private int idCategoria;
-	private int idProdotto;
+	private Categoria categoria = new Categoria();
+	private Prodotto prodotto = new Prodotto();
 	private int owner;
 	private String method;
-	private List<LabelValueBean> listaAnnunci;
+	private List<LabelValueBean> listaCategorie;
+	
 	
 	
 	public int getId() {
@@ -35,10 +38,10 @@ public class GestioneAnnunciForm extends ActionForm {
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
-	public Date getDataInserimento() {
+	public String getDataInserimento() {
 		return dataInserimento;
 	}
-	public void setDataInserimento(Date dataInserimento) {
+	public void setDataInserimento(String dataInserimento) {
 		this.dataInserimento = dataInserimento;
 	}
 	public int getVisite() {
@@ -53,17 +56,17 @@ public class GestioneAnnunciForm extends ActionForm {
 	public void setStato(int stato) {
 		this.stato = stato;
 	}
-	public int getIdCategoria() {
-		return idCategoria;
+	public Categoria getCategoria() {
+		return categoria;
 	}
-	public void setIdCategoria(int idCategoria) {
-		this.idCategoria = idCategoria;
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
 	}
-	public int getIdProdotto() {
-		return idProdotto;
+	public Prodotto getProdotto() {
+		return prodotto;
 	}
-	public void setIdProdotto(int idProdotto) {
-		this.idProdotto = idProdotto;
+	public void setProdotto(Prodotto prodotto) {
+		this.prodotto = prodotto;
 	}
 	public int getOwner() {
 		return owner;
@@ -77,12 +80,11 @@ public class GestioneAnnunciForm extends ActionForm {
 	public void setMethod(String method) {
 		this.method = method;
 	}
-	public List<LabelValueBean> getListaAnnunci() {
-		listaAnnunci = CollezioniFactory.getCollezioni().getOptions("annunci");
-		return listaAnnunci;
-
+	public List<LabelValueBean> getListaCategorie() {
+		listaCategorie = CollezioniFactory.getCollezioni().getOptions("categorie");
+		return listaCategorie;
 	}
-	public void setListaAnnunci(List<LabelValueBean> listaAnnunci) {
-		this.listaAnnunci = listaAnnunci;
+	public void setListaCategorie(List<LabelValueBean> listaCategorie) {
+		this.listaCategorie = listaCategorie;
 	}
 }

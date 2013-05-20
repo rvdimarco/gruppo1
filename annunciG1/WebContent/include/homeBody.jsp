@@ -4,6 +4,12 @@
 
 <center>
 
-	
+	<html:form action="annunciForm.do">
+	 <html:hidden property="method" value="search"/>
+  	 <html:select name="annunciForm" property="categoria.idCategoria">
+			<html:optionsCollection name="annunciForm" property="listaCategorie"/>
+		</html:select>
+	<html:submit>vai</html:submit>
+	</html:form>
 
 </center>

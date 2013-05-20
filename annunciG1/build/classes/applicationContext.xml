@@ -19,7 +19,9 @@
 		<property name="dataSource" ref="dataSource"/>	
 	</bean>
 
-	<bean id="adao" class="it.geek.annunci.dao.AnnuncioDAO" />
+	<bean id="adao" class="it.geek.annunci.dao.AnnuncioDAO">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
 	<bean id="aservice" class="it.geek.annunci.service.AnnuncioService">
 		<property name="annuncioDAO">
 			<ref bean="adao" />
@@ -29,13 +31,7 @@
 	<bean id="col" class="it.geek.annunci.util.Collezioni">
 		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
 	</bean>
-	
-	<bean id="cdao" class="it.geek.annunci.dao.CategoriaDAO" />
-	<bean id="cservice" class="it.geek.annunci.service.CategoriaService">
-		<property name="categoriaDAO">
-			<ref bean="cdao" />
-		</property>
-	</bean>	
+
 		
 	<!--======================================================================-->
 	<!-- 				Transaction management	                              -->

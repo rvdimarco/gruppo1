@@ -22,18 +22,18 @@ private static Logger log = Logger.getLogger(GestioneAnnunciAction.class);
 		
 	}
 	
-	public ActionForward visualizza(ActionMapping mapping,
+	public ActionForward search(ActionMapping mapping,
 			ActionForm form,
 			HttpServletRequest request,
 			HttpServletResponse response)
 			throws Exception{
 		
-		log.info("metodo visualizza...");
+		log.info("metodo search...");
 		
 		List<Annuncio> listaAnnunci = ServiceFactory.getAnnuncioService().getAll();
 		request.setAttribute("listaAnnunci", listaAnnunci);	
 		
-		return mapping.findForward("dettagli");
+		return mapping.findForward("lista");
 	}
 
 }

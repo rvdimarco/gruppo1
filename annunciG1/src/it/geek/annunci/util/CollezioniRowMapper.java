@@ -16,7 +16,4 @@ public class CollezioniRowMapper implements RowMapper<LabelValueBean>{
 		
 		return l;
 	}
-	
-	
-
 }
