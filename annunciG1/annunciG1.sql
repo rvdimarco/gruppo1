@@ -120,3 +120,36 @@ INSERT INTO `annunci`.`categorie` (`id`, `descrizione`) VALUES ('4', 'Elettrodom
 INSERT INTO `annunci`.`categorie` (`id`, `descrizione`) VALUES ('5', 'Telefonia');
 INSERT INTO `annunci`.`categorie` (`id`, `descrizione`) VALUES ('6', 'Vestiario');
 
+
+
+INSERT INTO `annunci`.`prodotti` (`id`, `descrizione`, `prezzo`) VALUES ('1', 'Vendesi Casa', '500000');
+INSERT INTO `annunci`.`prodotti` (`id`, `descrizione`, `prezzo`) VALUES ('2', 'Affittasi Stanza Singola mq 20', '700');
+INSERT INTO `annunci`.`prodotti` (`id`, `descrizione`, `prezzo`) VALUES ('3', 'Ferrari 458 Italia', '250000');
+INSERT INTO `annunci`.`prodotti` (`id`, `descrizione`, `prezzo`) VALUES ('4', 'Audi R8', '150000');
+INSERT INTO `annunci`.`prodotti` (`id`, `descrizione`, `prezzo`) VALUES ('5', 'Ducati 1098', '30000');
+INSERT INTO `annunci`.`prodotti` (`id`, `descrizione`, `prezzo`) VALUES ('6', 'Yamaha R1', '18000');
+INSERT INTO `annunci`.`prodotti` (`id`, `descrizione`, `prezzo`) VALUES ('7', 'Tostapane', '25');
+INSERT INTO `annunci`.`prodotti` (`id`, `descrizione`, `prezzo`) VALUES ('8', 'Microonde', '20');
+INSERT INTO `annunci`.`prodotti` (`id`, `descrizione`, `prezzo`) VALUES ('9', 'iPhone 5', '690');
+INSERT INTO `annunci`.`prodotti` (`id`, `descrizione`, `prezzo`) VALUES ('10', 'Samsung Galaxy S4', '700');
+INSERT INTO `annunci`.`prodotti` (`id`, `descrizione`, `prezzo`) VALUES ('11', 'Levi\'s', '50');
+INSERT INTO `annunci`.`prodotti` (`id`, `descrizione`, `prezzo`) VALUES ('12', 'Adidas Trainer', '70');
+
+
+
+
+
+INSERT INTO `annunci`.`annunci` (`id`, `descrizione`, `stato`, `id_categoria`, `id_prodotto`, `owner`) VALUES ('1', 'Vendesi casa in pieno centro a Roma  mq 80 ', '1', '1', '1', '2');
+INSERT INTO `annunci`.`annunci` (`id`, `descrizione`, `stato`, `id_categoria`, `id_prodotto`, `owner`) VALUES ('2', 'Affitasi stanza vicino La Sapienza mq 20', '1', '1', '2', '1');
+INSERT INTO `annunci`.`annunci` (`id`, `descrizione`, `stato`, `id_categoria`, `id_prodotto`, `owner`) VALUES ('3', 'Vendesi Ferrari 458 italia', '0', '2', '1', '3');
+INSERT INTO `annunci`.`annunci` (`id`, `descrizione`, `stato`, `id_categoria`, `id_prodotto`, `owner`) VALUES ('4', 'Vendesi Audi R8', '1', '2', '2', '2');
+INSERT INTO `annunci`.`annunci` (`id`, `descrizione`, `stato`, `id_categoria`, `id_prodotto`, `owner`) VALUES ('5', 'Vendesi Ducati 1098', '0', '3', '1', '4');
+INSERT INTO `annunci`.`annunci` (`id`, `descrizione`, `stato`, `id_categoria`, `id_prodotto`, `owner`) VALUES ('6', 'Vendesi Yamaha R1', '1', '3', '2', '5');
+INSERT INTO `annunci`.`annunci` (`id`, `descrizione`, `stato`, `id_categoria`, `id_prodotto`, `owner`) VALUES ('7', 'Vendesi Tostapane', '0', '4', '1', '5');
+INSERT INTO `annunci`.`annunci` (`id`, `descrizione`, `stato`, `id_categoria`, `id_prodotto`, `owner`) VALUES ('8', 'Vendesi Microonde', '0', '4', '2', '3');
+INSERT INTO `annunci`.`annunci` (`id`, `descrizione`, `stato`, `id_categoria`, `id_prodotto`, `owner`) VALUES ('9', 'Vendesi iPhone', '1', '5', '1', '1');
+INSERT INTO `annunci`.`annunci` (`id`, `descrizione`, `stato`, `id_categoria`, `id_prodotto`, `owner`) VALUES ('10', 'Vendesi S4', '0', '5', '2', '4');
+INSERT INTO `annunci`.`annunci` (`id`, `descrizione`, `stato`, `id_categoria`, `id_prodotto`, `owner`) VALUES ('11', 'Vendesi jeans Levi\'s', '0', '6', '1', '1');
+INSERT INTO `annunci`.`annunci` (`id`, `descrizione`, `stato`, `id_categoria`, `id_prodotto`, `owner`) VALUES ('12', 'Vendesi Adidas Trainer', '1', '6', '2', '4');
+
+
