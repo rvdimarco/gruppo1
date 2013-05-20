@@ -12,18 +12,18 @@
 	</form-beans>
 
 	<action-mappings>
-	
+
 		<action path="/annunciForm"
 				name="annunciForm"
 				scope="request"
 				type="it.geek.controller.GestioneAnnunciAction"
 				parameter="method">
-				
-							
+
+			<forward name="dettagli" path="/dettagli.jsp"/>
 			<forward name="failure" path="/error.jsp"/>
 
 		</action>
-		
+
 	</action-mappings>
 
 	<message-resources parameter="ApplicationResources"></message-resources>

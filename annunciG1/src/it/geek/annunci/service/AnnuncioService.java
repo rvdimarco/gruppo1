@@ -13,9 +13,9 @@ public class AnnuncioService implements AnnuncioServiceInterface {
 	}
 
 	@Override
-	public boolean getExample(Annuncio u) {
+	public List<Annuncio> getByExample() {
 		// TODO Auto-generated method stub
-		return false;
+		return null;
 	}
 
 }

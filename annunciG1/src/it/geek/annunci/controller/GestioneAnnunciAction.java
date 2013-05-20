@@ -1,4 +1,4 @@
-package it.geek.controller;
+package it.geek.annunci.controller;
 
 import it.geek.annunci.model.Annuncio;
 import it.geek.annunci.service.ServiceFactory;
@@ -33,7 +33,7 @@ private static Logger log = Logger.getLogger(GestioneAnnunciAction.class);
 		List<Annuncio> listaAnnunci = ServiceFactory.getAnnuncioService().getAll();
 		request.setAttribute("listaAnnunci", listaAnnunci);	
 		
-		return mapping.findForward("success");
+		return mapping.findForward("dettagli");
 	}
 
 }
