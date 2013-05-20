@@ -25,6 +25,10 @@
 			<ref bean="adao" />
 		</property>
 	</bean>	
+	
+	<bean id="col" class="it.geek.annunci.util.Collezioni">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
 		
 	<!--======================================================================-->
 	<!-- 				Transaction management	                              -->
