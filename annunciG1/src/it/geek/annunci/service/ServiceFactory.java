@@ -18,4 +18,8 @@ public class ServiceFactory {
 	public static CategoriaServiceInterface getCategorieService() {
 		return (CategoriaServiceInterface)cxt.getBean("cservice");
 	}
+	
+	public static UtenteServiceInterface getUtenteService(){
+		return (UtenteServiceInterface)cxt.getBean("uservice");
+	}
 }

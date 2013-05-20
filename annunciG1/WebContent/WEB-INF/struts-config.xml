@@ -11,7 +11,9 @@
 				   
 		<form-bean name="categorieForm"
 				   type="it.geek.annunci.form.GestioneCategorieForm" />
-
+				   
+		<form-bean name="loginForm"
+				   type="it.geek.annunci.form.LoginForm" />
 	</form-beans>
 
 	<action-mappings>
@@ -19,7 +21,7 @@
 		<action path="/annunciForm"
 				name="annunciForm"
 				scope="request"
-				type="it.geek.controller.GestioneAnnunciAction"
+				type="it.geek.annunci.controller.GestioneAnnunciAction"
 				parameter="method">
 
 			<forward name="dettagli" path="/dettagli.jsp"/>
@@ -30,10 +32,21 @@
 		<action path="/categorieForm"
 				name="categorieForm"
 				scope="request"
-				type="it.geek.controller.GestioneCategorieAction"
+				type="it.geek.annunci.controller.GestioneCategorieAction"
 				parameter="method">
 
 			<forward name="success" path="/home.jsp"/>
+			<forward name="failure" path="/error.jsp"/>
+
+		</action>
+		
+		<action path="/loginForm"
+				name="loginForm"
+				scope="request"
+				type="it.geek.annunci.controller.GestioneCategorieAction"
+				parameter="method">
+
+			<forward name="success" path="/areaPrivata.jsp"/>
 			<forward name="failure" path="/error.jsp"/>
 
 		</action>
