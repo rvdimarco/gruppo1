@@ -14,4 +14,8 @@ public class ServiceFactory {
 	public static AnnuncioServiceInterface getAnnuncioService(){
 		return (AnnuncioServiceInterface)cxt.getBean("aservice");
 	}
+
+	public static CategoriaServiceInterface getCategorieService() {
+		return (CategoriaServiceInterface)cxt.getBean("cservice");
+	}
 }
