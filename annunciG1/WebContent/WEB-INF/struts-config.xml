@@ -6,21 +6,20 @@
 
 	<form-beans>
 
-		<form-bean name=""
-				   type="" />
+		<form-bean name="annunciForm"
+				   type="it.geek.annunci.form.GestioneAnnunciForm" />
 
 	</form-beans>
 
 	<action-mappings>
 	
-		<action path=""
-				name=""
+		<action path="/annunciForm"
+				name="annunciForm"
 				scope="request"
-				type=""
+				type="it.geek.controller.GestioneAnnunciAction"
 				parameter="method">
 				
-			<forward name="success" path=""/>
-			<forward name="success" path=""/>
+			<forward name="failure" path="/error.jsp"/>
 
 		</action>
 		
