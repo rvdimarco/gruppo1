@@ -1,5 +1,5 @@
 package it.geek.annunci.dao;
 
-public class AnnuncioDAO {
+public class AnnuncioDAO implements AnnuncioDaoInterface{
 
 }
