@@ -1,6 +1,8 @@
 package it.geek.annunci.model;
 
-public class Ruolo {
+import java.io.Serializable;
+
+public class Ruolo implements Serializable{
 	
 	private int id;
 	private String descrizione;

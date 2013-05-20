@@ -1,8 +1,9 @@
 package it.geek.annunci.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Annuncio {
+public class Annuncio implements Serializable{
 
 	private int id;
 	private String descrizione;
