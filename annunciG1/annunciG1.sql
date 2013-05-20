@@ -96,3 +96,27 @@ ALTER TABLE `annunci`.`annunci`
   ON DELETE NO ACTION
   ON UPDATE NO ACTION
 , ADD INDEX `fk_prodotti_idx` (`id_prodotto` ASC) ;
+
+
+
+INSERT INTO `annunci`.`ruoli` (`id`, `descrizione`) VALUES ('1', 'Amministratore');
+INSERT INTO `annunci`.`ruoli` (`id`, `descrizione`) VALUES ('2', 'Standard');
+
+
+
+INSERT INTO `annunci`.`utenti` (`id`, `username`, `password`, `nome`, `cognome`, `id_ruolo`, `stato`, `credito_residuo`) VALUES ('1', 'riccardo', 'riccardo', 'Riccardo', 'Carnazza', '1', '1', '90');
+INSERT INTO `annunci`.`utenti` (`id`, `username`, `password`, `nome`, `cognome`, `id_ruolo`, `stato`, `credito_residuo`) VALUES ('2', 'andrea', 'andrea', 'Andrea', 'Coluzza', '1', '1', '100');
+INSERT INTO `annunci`.`utenti` (`id`, `username`, `password`, `nome`, `cognome`, `id_ruolo`, `stato`, `credito_residuo`) VALUES ('3', 'ruggio', 'ruggio', 'Andrea', 'Di Ruggero', '2', '0', '75');
+INSERT INTO `annunci`.`utenti` (`id`, `username`, `password`, `nome`, `cognome`, `id_ruolo`, `stato`, `credito_residuo`) VALUES ('4', 'antonio', 'antonio', 'Antonio', 'Scarpati', '2', '0', '50');
+INSERT INTO `annunci`.`utenti` (`id`, `username`, `password`, `nome`, `cognome`, `id_ruolo`, `stato`, `credito_residuo`) VALUES ('5', 'rosario', 'rosario', 'Rosario', 'Di Marco', '2', '1', '125');
+
+
+
+
+INSERT INTO `annunci`.`categorie` (`id`, `descrizione`) VALUES ('1', 'Immobili');
+INSERT INTO `annunci`.`categorie` (`id`, `descrizione`) VALUES ('2', 'Automobili');
+INSERT INTO `annunci`.`categorie` (`id`, `descrizione`) VALUES ('3', 'Motociclette');
+INSERT INTO `annunci`.`categorie` (`id`, `descrizione`) VALUES ('4', 'Elettrodomestici');
+INSERT INTO `annunci`.`categorie` (`id`, `descrizione`) VALUES ('5', 'Telefonia');
+INSERT INTO `annunci`.`categorie` (`id`, `descrizione`) VALUES ('6', 'Vestiario');
+
