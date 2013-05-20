@@ -8,7 +8,9 @@
 
 		<form-bean name="annunciForm"
 				   type="it.geek.annunci.form.GestioneAnnunciForm" />
-
+				   
+		<form-bean name="loginForm"
+				   type="it.geek.annunci.form.LoginForm" />
 	</form-beans>
 
 	<action-mappings>
@@ -20,6 +22,17 @@
 				parameter="method">
 
 			<forward name="lista" path="/listaAnnunci.jsp"/>
+			<forward name="failure" path="/error.jsp"/>
+
+		</action>
+		
+		<action path="/loginForm"
+				name="loginForm"
+				scope="request"
+				type="it.geek.annunci.controller.GestioneCategorieAction"
+				parameter="method">
+
+			<forward name="success" path="/areaPrivata.jsp"/>
 			<forward name="failure" path="/error.jsp"/>
 
 		</action>

@@ -15,4 +15,8 @@ public class ServiceFactory {
 		return (AnnuncioServiceInterface)cxt.getBean("aservice");
 	}
 
+	
+	public static UtenteServiceInterface getUtenteService(){
+		return (UtenteServiceInterface)cxt.getBean("uservice");
+	}
 }
