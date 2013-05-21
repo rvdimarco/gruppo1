@@ -7,6 +7,6 @@ import java.util.List;
 public interface AnnuncioServiceInterface {
 	
 	public List<Annuncio> getAll();
-	public List<Annuncio> getByExample();
+	public List<Annuncio> getByExample(Annuncio annuncio);
 
 }
