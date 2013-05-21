@@ -2,10 +2,8 @@ package it.geek.annunci.form;
 
 import it.geek.annunci.model.Categoria;
 import it.geek.annunci.model.Prodotto;
-import it.geek.annunci.util.Collezioni;
 import it.geek.annunci.util.CollezioniFactory;
 
-import java.util.Date;
 import java.util.List;
 
 import org.apache.struts.action.ActionForm;

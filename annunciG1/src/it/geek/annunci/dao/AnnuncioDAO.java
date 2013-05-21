@@ -5,11 +5,12 @@ import it.geek.annunci.model.Annuncio;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-
 public class AnnuncioDAO implements AnnuncioDaoInterface{
-
+	
+	private static Logger log = Logger.getLogger(AnnuncioDaoInterface.class);
 	private JdbcTemplate jdbcTemplate;
 
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
@@ -17,14 +18,23 @@ public class AnnuncioDAO implements AnnuncioDaoInterface{
 	}
 
 	public List<Annuncio> findAll(){
-		String sql ="";
+		String sql ="SELECT id, descrizione, data_inserimento, visite, id_categoria, id_prodotto, stato, owner FROM annunci";		
+		return (List<Annuncio>)jdbcTemplate.query(sql, new AnnuncioRowMapper());
+	}
+	
+	public List<Annuncio> findByExample(Annuncio annuncio){
 		
-		Annuncio fake = new Annuncio();
-		fake.setDescrizione("bla bla bla");
+		StringBuilder sb = new StringBuilder();
+		sb.append("SELECT id, descrizione, data_inserimento, visite, id_categoria, id_prodotto, stato, owner FROM annunci WHERE 1=1 ");
 		
-		List<Annuncio> ret = new ArrayList<>();
-		ret.add(fake);
+		List params = new ArrayList<>();
 		
-		return ret;
+		if(annuncio.getDescrizione()!=null){
+			sb.append("AND descrizione LIKE ? ");
+			params.add("%"+annuncio.getDescrizione()+"%");
+		}
+		
+		log.info("QUERY: " + sb);
+		return jdbcTemplate.query(sb.toString(), params.toArray(), new AnnuncioRowMapper());
 	}
 }

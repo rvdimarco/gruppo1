@@ -12,16 +12,22 @@ public class AnnuncioService implements AnnuncioServiceInterface {
 		this.annuncioDAO = annuncioDAO;
 	}
 	
+	List<Annuncio> listaAnnunci = null;
+	
 	@Override
 	public List<Annuncio> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		listaAnnunci = annuncioDAO.findAll();
+		
+		return listaAnnunci;
 	}
 
 	@Override
-	public List<Annuncio> getByExample() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Annuncio> getByExample(Annuncio annuncio) {
+		
+		listaAnnunci = annuncioDAO.findByExample(annuncio);
+		
+		return listaAnnunci;
 	}
 
 }

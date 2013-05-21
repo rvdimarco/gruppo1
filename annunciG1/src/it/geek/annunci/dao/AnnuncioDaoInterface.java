@@ -7,5 +7,6 @@ import java.util.List;
 public interface AnnuncioDaoInterface {
 
 	public List<Annuncio> findAll();
+	public List<Annuncio> findByExample(Annuncio annuncio);
 		
 }
