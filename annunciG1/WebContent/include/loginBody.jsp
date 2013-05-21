@@ -5,10 +5,11 @@
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-
+${messaggio}
 <html:form method="post" action="login.do">
 			Username&nbsp;<input type="text" name="username" />
 			Password&nbsp;<input type="password" name="password" />
+			<html:hidden property="method" value="login" />
 			<input type="submit" name="LoginButton" value="Invia" />
 </html:form>
 

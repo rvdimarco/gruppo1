@@ -23,8 +23,6 @@ public class GestioneUtenteAction extends DispatchAction{
 			HttpServletRequest request, HttpServletResponse response)
 					throws Exception{
 
-
-
 		return mapping.findForward("registrazione");
 	}
 
@@ -51,7 +49,6 @@ public class GestioneUtenteAction extends DispatchAction{
 
 
 		if(inserito){
-			//lavoro come la login e vado direttamente alla home
 			Utente uSession = ServiceFactory.getUtenteService().get(u.getUsername());
 
 			HttpSession session = request.getSession();

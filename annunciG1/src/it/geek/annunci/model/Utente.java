@@ -62,4 +62,12 @@ public class Utente implements Serializable{
 	public void setCreditoResiduo(int creditoResiduo) {
 		this.creditoResiduo = creditoResiduo;
 	}
+	@Override
+	public String toString() {
+		return "Utente [id=" + id + ", username=" + username + ", password="
+				+ password + ", nome=" + nome + ", cognome=" + cognome
+				+ ", idRuolo=" + idRuolo + ", stato=" + stato
+				+ ", creditoResiduo=" + creditoResiduo + "]";
+	}
+	
 }

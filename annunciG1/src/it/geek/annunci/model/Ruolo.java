@@ -20,4 +20,9 @@ public class Ruolo implements Serializable{
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
+	@Override
+	public String toString() {
+		return "Ruolo [id=" + id + ", descrizione=" + descrizione + "]";
+	}
+	
 }

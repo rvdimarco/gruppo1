@@ -63,4 +63,12 @@ public class Annuncio implements Serializable{
 	public void setOwner(int owner) {
 		this.owner = owner;
 	}
+	@Override
+	public String toString() {
+		return "Annuncio [id=" + id + ", descrizione=" + descrizione
+				+ ", dataInserimento=" + dataInserimento + ", visite=" + visite
+				+ ", stato=" + stato + ", idCategoria=" + idCategoria
+				+ ", idProdotto=" + idProdotto + ", owner=" + owner + "]";
+	}
+	
 }

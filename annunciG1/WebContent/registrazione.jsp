@@ -16,8 +16,8 @@
 				<td align="center" colspan="3"><jsp:include page="include/header.jsp" flush="true" /></td>
 			</tr>
 			<tr height="500">
-				<td align="center" width="20%"><jsp:include page="include/registrazioneBody.jsp" flush="true" /></td>
-				<td align="center" width="60%"><jsp:include page="include/homeBody.jsp" flush="true" /></td>
+				<td align="center" width="20%"><jsp:include page="include/areaPrivataBody.jsp" flush="true" /></td>
+				<td align="center" width="60%"><jsp:include page="include/registrazioneBody.jsp" flush="true" /></td>
 				<td align="center" width="20%"><jsp:include page="include/bestBody.jsp" flush="true" /></td>
 			</tr>
 		</table>

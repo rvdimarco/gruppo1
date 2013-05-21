@@ -9,16 +9,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import org.apache.struts.actions.DispatchAction;
 
-public class LoginAction extends Action {
+public class LoginAction extends DispatchAction {
 
 	Logger log = Logger.getLogger(LoginAction.class);
 
-	public ActionForward execute(ActionMapping mapping, 
+	public ActionForward login(ActionMapping mapping, 
 			ActionForm form,
 			HttpServletRequest request, 
 			HttpServletResponse response)
@@ -35,8 +35,10 @@ public class LoginAction extends Action {
 		Utente u = ServiceFactory.getUtenteService().get(login.getUsername());
 
 		if(u==null){
+			request.setAttribute("messaggio", "utente non trovato");
 			forwardName="failure";
 		}else if(!u.getPassword().equals(login.getPassword())){
+			request.setAttribute("messaggio", "password non valida");
 			forwardName="failure";
 		}else{
 			HttpSession session = request.getSession();
@@ -55,12 +57,12 @@ public class LoginAction extends Action {
 		
 		HttpSession session = request.getSession();
 		Utente u = (Utente)session.getAttribute("utenteInSessione");
-		
+		log.debug("utente in sessione: " + u);
 		
 		if(u==null){
-			return mapping.findForward("success");
+			return mapping.findForward("failure");
 		}else{
-			return mapping.findForward("areaPrivata");		
+			return mapping.findForward("success");		
 
 		}
 	}

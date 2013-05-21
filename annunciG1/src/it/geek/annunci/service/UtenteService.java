@@ -16,17 +16,19 @@ public class UtenteService implements UtenteServiceInterface{
 		this.utenteDAO = utenteDAO;
 	}
 
-
+	Utente utente = null;
+	boolean ret = false;
+	
 	@Override
 	public Utente get(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		utente = utenteDAO.findById(id);
+
+		return utente;
 	}
 	
-	
-	boolean ret = false;
 	public boolean create(Utente u) {
-
+		
 		ret = utenteDAO.inserimento(u);
 		return ret;
 

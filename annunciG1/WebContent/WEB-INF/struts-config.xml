@@ -32,12 +32,13 @@
 		<action path="/login"
 				name="loginForm"
 				scope="request"
-				type="it.geek.annunci.controller.LoginAction">
+				type="it.geek.annunci.controller.LoginAction"
+				parameter="method">
 				<!-- validate="true"
 					 input="/login.jsp" -->
 
 			<forward name="failure" path="/login.jsp"/>
-			<forward name="areaPrivata" path="/myPage.jsp"/>
+			<forward name="success" path="/myPage.jsp"/>
 
 		</action>
 		

@@ -35,5 +35,12 @@ public class Prodotto implements Serializable{
 	public void setDataAcquisto(Date dataAcquisto) {
 		this.dataAcquisto = dataAcquisto;
 	}
+	@Override
+	public String toString() {
+		return "Prodotto [idProdotto=" + idProdotto + ", descrizione="
+				+ descrizione + ", prezzo=" + prezzo + ", dataAcquisto="
+				+ dataAcquisto + "]";
+	}
+	
 }	
 	
