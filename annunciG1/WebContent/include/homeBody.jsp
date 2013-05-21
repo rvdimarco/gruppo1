@@ -5,7 +5,7 @@
 <center>
 	<h1>Fai la tua ricerca</h1>
 <table>
-	<html:form action="annunciForm.do">
+	<html:form action="annunci.do">
 		<tr>
 			<td><strong>Selezione una categoria: </strong></td>
 	  	 	<td><html:select name="annunciForm" property="categoria.idCategoria">
