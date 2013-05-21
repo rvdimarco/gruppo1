@@ -11,6 +11,9 @@
 				   
 		<form-bean name="loginForm"
 				   type="it.geek.annunci.form.LoginForm" />
+				   
+		<form-bean name="utenteForm"
+				   type="it.geek.annunci.form.UtenteForm" />
 	</form-beans>
 
 	<action-mappings>
@@ -40,7 +43,7 @@
 		
 		
 		
-		<action path="/registrazione" 
+		<action path="/utenti" 
 				name="utenteForm"
 				scope="request"
 				type="it.geek.annunci.controller.GestioneUtenteAction"

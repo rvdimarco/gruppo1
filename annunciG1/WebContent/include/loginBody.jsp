@@ -6,13 +6,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 
-<html:form styleId="loginForm" method="post" action="login.do">
+<html:form method="post" action="login.do">
 			Username&nbsp;<input type="text" name="username" />
 			Password&nbsp;<input type="password" name="password" />
 			<input type="submit" name="LoginButton" value="Invia" />
 </html:form>
 
-<html:form styleId="loginForm" method="post" action="login.do">
+<html:form method="post" action="utenti.do">
 			e se non sei ancora registrato... 
 			<input type="hidden" name="method" value="inserimento" />
 			<input type="submit" name="registrazione" value="Registrati" />
