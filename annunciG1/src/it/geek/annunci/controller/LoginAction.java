@@ -15,25 +15,25 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
 public class LoginAction extends Action {
-	
+
 	Logger log = Logger.getLogger(LoginAction.class);
-	
+
 	public ActionForward execute(ActionMapping mapping, 
-								 ActionForm form,
-								 HttpServletRequest request, 
-								 HttpServletResponse response)
-								 throws Exception{
-		
-		
+			ActionForm form,
+			HttpServletRequest request, 
+			HttpServletResponse response)
+					throws Exception{
+
+
 		log.debug("login in corso ..");
-		
+
 		String forwardName = "";
 
 		LoginForm login = (LoginForm) form;
 		log.debug("form: "+login);
-		
+
 		Utente u = ServiceFactory.getUtenteService().get(login.getUsername());
-		
+
 		if(u==null){
 			forwardName="failure";
 		}else if(!u.getPassword().equals(login.getPassword())){
@@ -43,7 +43,25 @@ public class LoginAction extends Action {
 			session.setAttribute("utenteInSessione", login);
 			forwardName="success";
 		}
-		
+
 		return mapping.findForward(forwardName);
+	}
+
+	public ActionForward areaPrivata(ActionMapping mapping, 
+			ActionForm form,
+			HttpServletRequest request, 
+			HttpServletResponse response)
+					throws Exception{
+		
+		HttpSession session = request.getSession();
+		Utente u = (Utente)session.getAttribute("utenteInSessione");
+		
+		
+		if(u==null){
+			return mapping.findForward("success");
+		}else{
+			return mapping.findForward("areaPrivata");		
+
+		}
 	}
 }

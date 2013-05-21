@@ -15,7 +15,7 @@
 
 	<action-mappings>
 
-		<action path="/annunciForm"
+		<action path="/annunci"
 				name="annunciForm"
 				scope="request"
 				type="it.geek.annunci.controller.GestioneAnnunciAction"
@@ -26,15 +26,27 @@
 
 		</action>
 		
-		<action path="/loginForm"
+		<action path="/login"
 				name="loginForm"
 				scope="request"
-				type="it.geek.annunci.controller.GestioneCategorieAction"
+				type="it.geek.annunci.controller.LoginAction">
+				<!-- validate="true"
+					 input="/login.jsp" -->
+
+			<forward name="failure" path="/login.jsp"/>
+			<forward name="areaPrivata" path="/myPage.jsp"/>
+
+		</action>
+		
+		
+		
+		<action path="/registrazione" 
+				name="utenteForm"
+				scope="request"
+				type="it.geek.annunci.controller.GestioneUtenteAction"
 				parameter="method">
-
-			<forward name="success" path="/areaPrivata.jsp"/>
-			<forward name="failure" path="/error.jsp"/>
-
+				
+			<forward name="registrazione" path="/registrazione.jsp" />
 		</action>
 
 	</action-mappings>

@@ -31,7 +31,6 @@
 	<bean id="col" class="it.geek.annunci.util.Collezioni">
 		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
 	</bean>
-
 	
 	<bean id="udao" class="it.geek.annunci.dao.UtenteDAO" />
 	<bean id="uservice" class="it.geek.annunci.service.UtenteService">
@@ -39,6 +38,7 @@
 			<ref bean="udao" />
 		</property>
 	</bean>	
+
 		
 	<!--======================================================================-->
 	<!-- 				Transaction management	                              -->

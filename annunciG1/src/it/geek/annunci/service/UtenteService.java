@@ -22,6 +22,15 @@ public class UtenteService implements UtenteServiceInterface{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	
+	boolean ret = false;
+	public boolean create(Utente u) {
+
+		ret = utenteDAO.inserimento(u);
+		return ret;
+
+	}
 }
 
 	

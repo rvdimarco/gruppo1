@@ -56,7 +56,7 @@ public class LoginForm extends ActionForm{
 		this.cognome = cognome;
 	}
 
-	public ActionErrors validate(ActionMapping mapping,
+	/*public ActionErrors validate(ActionMapping mapping,
 			HttpServletRequest request) {
 		ActionErrors errors = new ActionErrors();
 
@@ -80,5 +80,5 @@ public class LoginForm extends ActionForm{
 			errors.add("password", new ActionMessage("errors.login.caratteri_non_consentiti"));
 		}
 		return errors;
-	}
+	}*/
 }

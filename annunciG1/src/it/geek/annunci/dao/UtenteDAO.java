@@ -28,4 +28,15 @@ public class UtenteDAO implements UtenteDaoInterface{
 		}
 		return u;
 	}
+
+	public boolean inserimento(Utente u) {
+		
+		String sql = "INSERT INTO utenti(id,username,password,nome,cognome,id_ruolo,stato,credito_residuo values(?,?,?,?,?,?,?,?)";
+		int ritorno = jdbcTemplate.update(sql, new Object[] {u.getId(), u.getUsername(), u.getPassword(), u.getNome(), u.getCognome(), u.getIdRuolo(),u.getStato(), u.getCreditoResiduo()});
+		boolean ret = false;
+		if(ritorno>0){
+			ret = true;
+		}
+		return ret;
+	}
 }
