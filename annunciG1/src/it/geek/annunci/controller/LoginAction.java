@@ -18,12 +18,14 @@ public class LoginAction extends Action {
 	
 	Logger log = Logger.getLogger(LoginAction.class);
 	
-	public ActionForward execute(ActionMapping mapping, ActionForm form,
-									HttpServletRequest request, HttpServletResponse response)
-										throws Exception{
+	public ActionForward execute(ActionMapping mapping, 
+								 ActionForm form,
+								 HttpServletRequest request, 
+								 HttpServletResponse response)
+								 throws Exception{
 		
 		
-log.debug("login in corso ..");
+		log.debug("login in corso ..");
 		
 		String forwardName = "";
 
@@ -43,6 +45,5 @@ log.debug("login in corso ..");
 		}
 		
 		return mapping.findForward(forwardName);
-		
 	}
 }

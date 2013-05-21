@@ -26,6 +26,6 @@ public class UtenteDAO implements UtenteDaoInterface{
 		}catch(EmptyResultDataAccessException e){
 			log.error("Non ho trovato l'utente" +e);
 		}
-		return jdbcTemplate.queryForObject(sql, new Object[] {username},new UtenteRowMapper());
+		return u;
 	}
 }

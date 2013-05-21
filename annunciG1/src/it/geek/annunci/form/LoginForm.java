@@ -79,8 +79,6 @@ public class LoginForm extends ActionForm{
 		if (password!=null && !"".equals(password) && (password.contains("'")||password.contains("\"")||password.contains("/")||password.contains("\\")||password.contains("?"))){
 			errors.add("password", new ActionMessage("errors.login.caratteri_non_consentiti"));
 		}
-
 		return errors;
 	}
-
 }
