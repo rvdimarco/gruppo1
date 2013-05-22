@@ -32,7 +32,7 @@ public class LoginAction extends DispatchAction {
 		LoginForm login = (LoginForm) form;
 		log.debug("form: "+login);
 
-		Utente u = ServiceFactory.getUtenteService().get(login.getUsername());
+		Utente u = ServiceFactory.getUtenteService().get(login.getId());
 
 		if(u==null){
 			request.setAttribute("messaggio", "utente non trovato");

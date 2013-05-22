@@ -9,13 +9,23 @@ import org.apache.struts.action.ActionMessage;
 
 public class LoginForm extends ActionForm{
 
+	private int id;
 	private String username;
 	private String password;
 	private String nome;
 	private String cognome;
 	private String method;
 	
+
 	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public String getMethod() {
 		return method;
 	}

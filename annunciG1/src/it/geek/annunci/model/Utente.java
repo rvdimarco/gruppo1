@@ -9,7 +9,7 @@ public class Utente implements Serializable{
 	private String password;
 	private String nome;
 	private String cognome;
-	private int idRuolo;
+	private Ruolo ruolo;
 	private int stato;
 	private int creditoResiduo;
 	
@@ -44,11 +44,11 @@ public class Utente implements Serializable{
 	public void setCognome(String cognome) {
 		this.cognome = cognome;
 	}
-	public int getIdRuolo() {
-		return idRuolo;
+	public Ruolo getRuolo() {
+		return ruolo;
 	}
-	public void setIdRuolo(int idRuolo) {
-		this.idRuolo = idRuolo;
+	public void setRuolo(Ruolo ruolo) {
+		this.ruolo = ruolo;
 	}
 	public int getStato() {
 		return stato;
@@ -66,8 +66,8 @@ public class Utente implements Serializable{
 	public String toString() {
 		return "Utente [id=" + id + ", username=" + username + ", password="
 				+ password + ", nome=" + nome + ", cognome=" + cognome
-				+ ", idRuolo=" + idRuolo + ", stato=" + stato
-				+ ", creditoResiduo=" + creditoResiduo + "]";
+				+ ", ruolo=" + ruolo + ", stato=" + stato + ", creditoResiduo="
+				+ creditoResiduo + "]";
 	}
 	
 }

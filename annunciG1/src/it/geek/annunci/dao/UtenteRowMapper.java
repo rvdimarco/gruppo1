@@ -14,7 +14,7 @@ public class UtenteRowMapper implements RowMapper<Utente>{
 		
 		Utente ret = new Utente();
 		
-		
+		ret.setId(rs.getInt("id"));
 		ret.setUsername(rs.getString("username"));
 		ret.setPassword(rs.getString("password"));
 		ret.setNome(rs.getString("nome"));

@@ -20,7 +20,7 @@ public class UtenteService implements UtenteServiceInterface{
 	boolean ret = false;
 	
 	@Override
-	public Utente get(String id) {
+	public Utente get(int id) {
 		
 		utente = utenteDAO.findById(id);
 

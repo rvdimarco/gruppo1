@@ -17,22 +17,23 @@ public class UtenteDAO implements UtenteDaoInterface{
 		this.jdbcTemplate = jdbcTemplate;
 	}
 	
-	public Utente findById(String username) {
+	public Utente findById(int id) {
 		
-		String sql = "SELECT username, password, nome, cognome FROM utenti WHERE username=?";
+		String sql = "SELECT id, username, password, nome, cognome FROM utenti WHERE id=?";
 		Utente u = null;
 		try{
-			u = jdbcTemplate.queryForObject(sql, new Object[] {username},new UtenteRowMapper());
+			u = jdbcTemplate.queryForObject(sql, new Object[] {id},new UtenteRowMapper());
 		}catch(EmptyResultDataAccessException e){
 			log.error("Non ho trovato l'utente" +e);
 		}
 		return u;
 	}
 
-	public boolean inserimento(Utente u) {
-		
-		String sql = "INSERT INTO utenti(id, username, password, nome, cognome, id_ruolo, stato, credito_residuo values(?,?,?,?,?,?,?,?)";
-		int ritorno = jdbcTemplate.update(sql, new Object[] {u.getId(), u.getUsername(), u.getPassword(), u.getNome(), u.getCognome(), u.getIdRuolo(), u.getStato(), u.getCreditoResiduo()});
+	public boolean inserimento(Utente u){
+		log.debug("Input: " +u);
+		String sql = "INSERT INTO utenti(id, username, password, nome, cognome, id_ruolo, stato, credito_residuo) values(?,?,?,?,?,?,?,?)";
+		log.info("Query: " + sql);
+		int ritorno = jdbcTemplate.update(sql, new Object[] {u.getId(), u.getUsername(), u.getPassword(), u.getNome(), u.getCognome(), u.getRuolo().getId(), u.getStato(), u.getCreditoResiduo()});
 		boolean ret = false;
 		if(ritorno>0){
 			ret = true;
@@ -40,3 +41,4 @@ public class UtenteDAO implements UtenteDaoInterface{
 		return ret;
 	}
 }
+ 

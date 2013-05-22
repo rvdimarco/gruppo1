@@ -4,6 +4,6 @@ import it.geek.annunci.model.Utente;
 
 public interface UtenteDaoInterface {
 	
-	public Utente findById(String username);
+	public Utente findById(int id);
 	public boolean inserimento(Utente u);
 }
