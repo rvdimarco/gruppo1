@@ -51,6 +51,8 @@
 				parameter="method">
 				
 			<forward name="registrazione" path="/registrazione.jsp" />
+			<forward name="success" path="/myPage.jsp"/>
+			<forward name="failure" path="/registrazione.jsp"/>
 		</action>
 
 	</action-mappings>

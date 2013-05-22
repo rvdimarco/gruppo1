@@ -49,7 +49,7 @@ public class GestioneUtenteAction extends DispatchAction{
 
 
 		if(inserito){
-			Utente uSession = ServiceFactory.getUtenteService().get(u.getId());
+			Utente uSession = ServiceFactory.getUtenteService().get(u.getUsername());
 
 			HttpSession session = request.getSession();
 			session.setAttribute("utenteInSessione", uSession);

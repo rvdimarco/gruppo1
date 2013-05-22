@@ -4,7 +4,7 @@ import it.geek.annunci.model.Utente;
 
 public interface UtenteServiceInterface{
 	
-	public Utente get(int id);
+	public Utente get(String username);
 	public boolean create(Utente u);
 	
 

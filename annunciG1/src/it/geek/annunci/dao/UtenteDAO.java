@@ -17,12 +17,15 @@ public class UtenteDAO implements UtenteDaoInterface{
 		this.jdbcTemplate = jdbcTemplate;
 	}
 	
-	public Utente findById(int id) {
+	public Utente findById(String username) {
 		
-		String sql = "SELECT id, username, password, nome, cognome FROM utenti WHERE id=?";
+		log.debug("findById::jdbcTemplate="+jdbcTemplate);
+		log.debug("findById::");
+		
+		String sql = "SELECT id, username, password, nome, cognome FROM utenti WHERE username=?";
 		Utente u = null;
 		try{
-			u = jdbcTemplate.queryForObject(sql, new Object[] {id},new UtenteRowMapper());
+			u = jdbcTemplate.queryForObject(sql, new Object[] {username},new UtenteRowMapper());
 		}catch(EmptyResultDataAccessException e){
 			log.error("Non ho trovato l'utente" +e);
 		}

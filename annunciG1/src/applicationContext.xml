@@ -32,7 +32,9 @@
 		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
 	</bean>
 	
-	<bean id="udao" class="it.geek.annunci.dao.UtenteDAO" />
+	<bean id="udao" class="it.geek.annunci.dao.UtenteDAO">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
 	<bean id="uservice" class="it.geek.annunci.service.UtenteService">
 		<property name="utenteDAO">
 			<ref bean="udao" />

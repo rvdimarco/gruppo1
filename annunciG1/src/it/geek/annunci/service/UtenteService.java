@@ -20,9 +20,9 @@ public class UtenteService implements UtenteServiceInterface{
 	boolean ret = false;
 	
 	@Override
-	public Utente get(int id) {
+	public Utente get(String username) {
 		
-		utente = utenteDAO.findById(id);
+		utente = utenteDAO.findById(username);
 
 		return utente;
 	}
