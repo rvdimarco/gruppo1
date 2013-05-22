@@ -54,12 +54,8 @@ public class LoginAction extends DispatchAction {
 			HttpServletRequest request, 
 			HttpServletResponse response)
 					throws Exception{
-		
-		HttpSession session = request.getSession();
-		Utente u = (Utente)session.getAttribute("utenteInSessione");
-		log.debug("utente in sessione: " + u);
-		
-		if(u==null){
+
+		if("utenteInSessione"==null){
 			return mapping.findForward("failure");
 		}else{
 			return mapping.findForward("success");		
