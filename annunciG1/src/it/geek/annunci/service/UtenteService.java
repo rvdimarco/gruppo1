@@ -1,8 +1,11 @@
 package it.geek.annunci.service;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 
 import it.geek.annunci.dao.UtenteDaoInterface;
+import it.geek.annunci.model.Annuncio;
 import it.geek.annunci.model.Utente;
 
 public class UtenteService implements UtenteServiceInterface{
@@ -18,11 +21,12 @@ public class UtenteService implements UtenteServiceInterface{
 
 	Utente utente = null;
 	boolean ret = false;
+	List<Utente> listaUtente = null;
 	
 	@Override
-	public Utente get(String username) {
+	public Utente get(int id) {
 		
-		utente = utenteDAO.findById(username);
+		utente = utenteDAO.findById(id);
 
 		return utente;
 	}
@@ -32,6 +36,19 @@ public class UtenteService implements UtenteServiceInterface{
 		ret = utenteDAO.inserimento(u);
 		return ret;
 
+	}
+	
+	public List<Utente> all(){
+		
+		listaUtente = utenteDAO.findAll();
+		return listaUtente;
+		
+	}
+	
+	public List<Utente> getByExample(Utente u) {
+		
+		listaUtente = utenteDAO.findByExample(u);
+		return listaUtente;
 	}
 }
 

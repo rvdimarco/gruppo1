@@ -7,6 +7,6 @@
 
 
 <html:form method="post" action="login.do">
-	<html:hidden property="method" value="login" />
+	<html:hidden property="method" value="areaPrivata" />
 	<html:submit>Accedi alla zona privata</html:submit  >
 </html:form>

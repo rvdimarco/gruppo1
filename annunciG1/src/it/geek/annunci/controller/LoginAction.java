@@ -1,5 +1,7 @@
 package it.geek.annunci.controller;
 
+import java.util.List;
+
 import it.geek.annunci.form.LoginForm;
 import it.geek.annunci.model.Utente;
 import it.geek.annunci.service.ServiceFactory;
@@ -31,18 +33,24 @@ public class LoginAction extends DispatchAction {
 
 		LoginForm login = (LoginForm) form;
 		log.debug("form: "+login);
-
-		Utente u = ServiceFactory.getUtenteService().get(login.getUsername());
-
-		if(u==null){
+		Utente uex = new Utente();
+		uex.setUsername(login.getUsername());
+		
+		List<Utente> list = ServiceFactory.getUtenteService().getByExample(uex);
+		
+		if(list.isEmpty()){
 			request.setAttribute("messaggio", "utente non trovato");
 			forwardName="failure";
-		}else if(!u.getPassword().equals(login.getPassword())){
+		}else if(list.size()>1){
+			request.setAttribute("messaggio", "problema tecnico: ho estratto "+list.size()+" utenti!");
+			forwardName="failure";
+		}else if(!list.get(0).getPassword().equals(list.get(0).getPassword())){
 			request.setAttribute("messaggio", "password non valida");
 			forwardName="failure";
 		}else{
+			log.debug("list.size: "+list.size());
 			HttpSession session = request.getSession();
-			session.setAttribute("utenteInSessione", login);
+			session.setAttribute("utenteInSessione", list.get(0));
 			forwardName="success";
 		}
 
@@ -55,7 +63,10 @@ public class LoginAction extends DispatchAction {
 			HttpServletResponse response)
 					throws Exception{
 
-		if("utenteInSessione"==null){
+		HttpSession session = request.getSession();
+		Utente u = (Utente) session.getAttribute("utenteInSessione");
+		log.debug("Utente in sessione "+u);
+		if(u == null){
 			return mapping.findForward("failure");
 		}else{
 			return mapping.findForward("success");		

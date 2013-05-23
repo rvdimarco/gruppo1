@@ -153,3 +153,6 @@ INSERT INTO `annunci`.`annunci` (`id`, `descrizione`, `stato`, `id_categoria`, `
 INSERT INTO `annunci`.`annunci` (`id`, `descrizione`, `stato`, `id_categoria`, `id_prodotto`, `owner`) VALUES ('12', 'Vendesi Adidas Trainer', '1', '6', '2', '4');
 
 
+
+ALTER TABLE `annunci`.`utenti` 
+ADD UNIQUE INDEX `username_UNIQUE` (`username` ASC) ;

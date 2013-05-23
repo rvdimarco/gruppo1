@@ -21,6 +21,7 @@ public class UtenteForm extends ActionForm{
 	private int creditoResiduo;
 	private Ruolo ruolo = new Ruolo();
 	private List<LabelValueBean> lRuolo;
+	private List<LabelValueBean> lUtente;
 	
 	
 	public int getId() {
@@ -73,6 +74,13 @@ public class UtenteForm extends ActionForm{
 	}
 	public Ruolo getRuolo() {
 		return ruolo;
+	}
+	public List<LabelValueBean> getlUtente() {
+		lUtente = CollezioniFactory.getCollezioni().getOptions("utenti");
+		return lUtente;
+	}
+	public void setlUtente(List<LabelValueBean> lUtente) {
+		this.lUtente = lUtente;
 	}
 	public void setRuolo(Ruolo ruolo) {
 		this.ruolo = ruolo;

@@ -49,7 +49,7 @@ public class GestioneUtenteAction extends DispatchAction{
 
 
 		if(inserito){
-			Utente uSession = ServiceFactory.getUtenteService().get(u.getUsername());
+			Utente uSession = ServiceFactory.getUtenteService().get(u.getId());
 
 			HttpSession session = request.getSession();
 			session.setAttribute("utenteInSessione", uSession);
@@ -67,6 +67,7 @@ public class GestioneUtenteAction extends DispatchAction{
 			throws Exception{
 		
 		HttpSession session = request.getSession();
+		session.removeAttribute("utenteInSessione");
 		session.invalidate();
 		
 		return mapping.findForward("logout");
