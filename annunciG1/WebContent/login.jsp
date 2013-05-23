@@ -9,6 +9,12 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Home</title>
+		
+		<!-- import for BOOTSTRAP CSS and JS (minimal) -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>	
+		<!-- end import -->
+		
 	</head>
 	<body>	
 	<table width="100%" border="3" bordercolor="blue">
