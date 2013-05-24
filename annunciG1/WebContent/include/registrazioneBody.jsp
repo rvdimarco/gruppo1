@@ -2,6 +2,14 @@
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<head>
+<!-- import for BOOTSTRAP CSS and JS (minimal) -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- end import -->
+</head>
+
 <center>
 	<strong>REGISTRAZIONE</strong>
 	<html:form action="utenti.do">
@@ -30,6 +38,8 @@
 				<td><html:text property="password"/></td>
 			</tr>
 		</table>
-		<html:submit>invia</html:submit>
+		<div class="btn-group">
+		<button class="btn btn-success">Invia</button>
+	</div>
 	</html:form>
 </center>
