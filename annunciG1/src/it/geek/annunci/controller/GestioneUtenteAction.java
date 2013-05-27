@@ -1,6 +1,7 @@
 package it.geek.annunci.controller;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.List;
 
 import it.geek.annunci.form.UtenteForm;
 import it.geek.annunci.model.Utente;
@@ -72,5 +73,21 @@ public class GestioneUtenteAction extends DispatchAction{
 		
 		return mapping.findForward("logout");
 		
+	}
+	
+	public ActionForward gestioneUtente(ActionMapping mapping, ActionForm form, 
+			HttpServletRequest request, HttpServletResponse response)throws Exception{
+		
+		UtenteForm utenteform = (UtenteForm) form;
+		log.debug("UtenteForm"+utenteform);
+
+		int id = utenteform.getId();
+		Utente u = new Utente();
+		
+		u = ServiceFactory.getUtenteService().get(u.getId());
+		request.setAttribute("Utente", u);
+
+		
+		return mapping.findForward("avanti");
 	}
 }
