@@ -39,7 +39,7 @@
 			</tr>
 		</table>
 		<div class="btn-group">
-			<input type="submit" class="btn btn-success">Invia</input>
+			<html:submit styleClass="btn btn-success">Invia</html:submit>
 		</div>
 	</html:form>
 </center>

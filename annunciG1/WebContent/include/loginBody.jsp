@@ -19,7 +19,7 @@ ${messaggio}
 			Password&nbsp;<input type="password" name="password" />
 	<html:hidden property="method" value="login" />
 	<div class="btn-group">
-		<input type="submit"  class="btn btn-success">Login</input>
+		<html:submit styleClass="btn btn-success">Login</html:submit>
 	</div>
 </html:form>
 
