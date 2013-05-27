@@ -21,6 +21,9 @@
 					<td align="center">${annuncio.idCategoria}</td>
 					<td align="center">${annuncio.idProdotto}</td>
 					<td align="center">${annuncio.owner}</td>
+				<c:if test="${not empty utenteInSessione}">
+					<td><a href="dettagliAnnuncio.jsp">Dettagli!</a></td>
+				</c:if>
 				</tr>
 			</c:if>
 			</c:forEach>
