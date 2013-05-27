@@ -54,7 +54,7 @@
 			<forward name="success" path="/myPage.jsp"/>
 			<forward name="failure" path="/registrazione.jsp"/>
 			<forward name="logout" path="/home.jsp"/>
-			<forward name="avanti" path="/myPageBody"/>
+			<forward name="avanti" path="/myPageBody.jsp"/>
 		</action>
 
 	</action-mappings>

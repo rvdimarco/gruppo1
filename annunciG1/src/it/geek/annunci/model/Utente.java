@@ -1,6 +1,7 @@
 package it.geek.annunci.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Utente implements Serializable{
 
@@ -12,7 +13,7 @@ public class Utente implements Serializable{
 	private Ruolo ruolo;
 	private int stato;
 	private int creditoResiduo;
-	
+	private List<Annuncio> listaAnnnunci;
 	
 	public int getId() {
 		return id;
@@ -68,6 +69,12 @@ public class Utente implements Serializable{
 				+ password + ", nome=" + nome + ", cognome=" + cognome
 				+ ", ruolo=" + ruolo + ", stato=" + stato + ", creditoResiduo="
 				+ creditoResiduo + "]";
+	}
+	public List<Annuncio> getListaAnnnunci() {
+		return listaAnnnunci;
+	}
+	public void setListaAnnnunci(List<Annuncio> listaAnnnunci) {
+		this.listaAnnnunci = listaAnnnunci;
 	}
 	
 }

@@ -22,8 +22,16 @@ public class UtenteForm extends ActionForm{
 	private Ruolo ruolo = new Ruolo();
 	private List<LabelValueBean> lRuolo;
 	private List<LabelValueBean> lUtente;
+	private List<LabelValueBean> lAnnunci;
 	
 	
+	public List<LabelValueBean> getlAnnunci() {
+		lAnnunci = CollezioniFactory.getCollezioni().getOptions("annunci");
+		return lAnnunci;
+	}
+	public void setlAnnunci(List<LabelValueBean> lAnnunci) {
+		this.lAnnunci = lAnnunci;
+	}
 	public int getId() {
 		return id;
 	}

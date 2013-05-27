@@ -60,34 +60,47 @@ public class GestioneUtenteAction extends DispatchAction{
 			return mapping.findForward("failure");
 		}
 	}
-	
+
 	public ActionForward esci(ActionMapping mapping,
 			ActionForm form,
 			HttpServletRequest request,
 			HttpServletResponse response)
-			throws Exception{
-		
+					throws Exception{
+
 		HttpSession session = request.getSession();
 		session.removeAttribute("utenteInSessione");
 		session.invalidate();
-		
+
 		return mapping.findForward("logout");
-		
+
 	}
-	
+
 	public ActionForward gestioneUtente(ActionMapping mapping, ActionForm form, 
 			HttpServletRequest request, HttpServletResponse response)throws Exception{
-		
+
 		UtenteForm utenteform = (UtenteForm) form;
 		log.debug("UtenteForm"+utenteform);
 
-		int id = utenteform.getId();
-		Utente u = new Utente();
 		
-		u = ServiceFactory.getUtenteService().get(u.getId());
-		request.setAttribute("Utente", u);
+		Utente ut = new Utente();
 
+		try {
+			BeanUtils.copyProperties(ut, utenteform);
+		} catch (IllegalAccessException e) {
+			log.error(e);
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+			log.error(e);
+			e.printStackTrace();
+		}
+		log.debug("utente: "+ut);
 		
+		int id = utenteform.getId();
+
+		ut = ServiceFactory.getUtenteService().get(ut.getId());
+		request.setAttribute("Utente", ut);
+
+
 		return mapping.findForward("avanti");
 	}
 }
