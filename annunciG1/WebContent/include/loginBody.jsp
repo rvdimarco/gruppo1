@@ -19,7 +19,7 @@ ${messaggio}
 			Password&nbsp;<input type="password" name="password" />
 	<html:hidden property="method" value="login" />
 	<div class="btn-group">
-		<button class="btn btn-success">Login</button>
+		<input type="submit"  class="btn btn-success">Login</input>
 	</div>
 </html:form>
 
@@ -27,7 +27,7 @@ ${messaggio}
 			e se non sei ancora registrato... 
 			<input type="hidden" name="method" value="inserimento" />
 	<div class="btn-group">
-		<button class="btn btn-success">Registrati</button>
+		<input type="submit" class="btn btn-success">Registrati</input>
 	</div>
 </html:form>
 

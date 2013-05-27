@@ -40,7 +40,7 @@
 				<td align="right">
 				
 				<div class="btn-group">
-						<button class="btn btn-success">Cerca</button>
+						<input type="submit"  class="btn btn-success">Cerca</input>
 				</div>
 			</tr>
 		</html:form>

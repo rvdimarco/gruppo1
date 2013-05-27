@@ -14,6 +14,6 @@
 <html:form method="post" action="login.do">
 	<html:hidden property="method" value="areaPrivata" />
 	<div class="btn-group">
-		<button class="btn btn-medium">Accedi alla zona privata</button>
+		<input type="submit"  class="btn btn-medium">Accedi alla zona privata</input>
 	</div>
 </html:form>

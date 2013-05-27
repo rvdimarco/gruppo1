@@ -26,7 +26,7 @@
 			<tr>
 				<td>Ruolo:</td>
 				<td><html:select name="utenteForm" property="ruolo.id">
-						<html:optionsCollection name="utenteForm" property="lRuolo"/>
+						<html:optionsCollection name="utenteForm" property="lRuolo" />
 					</html:select></td>
 			</tr>
 			<tr>
@@ -35,11 +35,11 @@
 			</tr>
 			<tr>
 				<td>Password:</td>
-				<td><html:text property="password"/></td>
+				<td><html:text property="password" /></td>
 			</tr>
 		</table>
 		<div class="btn-group">
-		<button class="btn btn-success">Invia</button>
-	</div>
+			<input type="submit" class="btn btn-success">Invia</input>
+		</div>
 	</html:form>
 </center>
