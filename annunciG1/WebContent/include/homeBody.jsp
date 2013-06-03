@@ -15,10 +15,9 @@
 		<html:form action="annunci.do">
 			<tr>
 				<td><strong>Selezione una categoria: </strong></td>
-				<td><html:select name="annunciForm"
-						property="idCategoria">
-						<html:optionsCollection name="annunciForm"
-							property="listaCategorie" />
+				<td><html:select name="annunciForm" property="idCategoria">
+						<html:option value=" "></html:option>
+						<html:optionsCollection name="annunciForm" property="listaCategorie" />
 					</html:select></td>
 			</tr>
 			<tr>
