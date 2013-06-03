@@ -34,6 +34,7 @@ private static Logger log = Logger.getLogger(GestioneAnnunciAction.class);
 		
 		log.info("metodo search...");
 		GestioneAnnunciForm annuncioForm = (GestioneAnnunciForm) form;
+		log.debug("############ annuncioForm: "+annuncioForm);
 		Annuncio annuncio = new Annuncio();
 		
 		java.util.Date defaultValue = null;

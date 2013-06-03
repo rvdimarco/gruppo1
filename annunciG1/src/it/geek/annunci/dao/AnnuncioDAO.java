@@ -34,6 +34,15 @@ public class AnnuncioDAO implements AnnuncioDaoInterface{
 			params.add("%"+annuncio.getDescrizione()+"%");
 		}
 		
+		if(annuncio.getStato()==0 || annuncio.getStato()==1){
+			sb.append("AND stato = ? ");
+			params.add(annuncio.getStato());
+		}
+		if(annuncio.getIdCategoria()==1 || annuncio.getIdCategoria()==2 || annuncio.getIdCategoria()==3 || annuncio.getIdCategoria()==4 || annuncio.getIdCategoria()==5 || annuncio.getIdCategoria()==6){
+			sb.append("AND id_categoria = ? ");
+			params.add(annuncio.getIdCategoria());
+		}
+		
 		log.info("QUERY: " + sb);
 		return jdbcTemplate.query(sb.toString(), params.toArray(), new AnnuncioRowMapper());
 	}

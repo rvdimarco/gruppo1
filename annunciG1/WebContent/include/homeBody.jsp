@@ -16,7 +16,7 @@
 			<tr>
 				<td><strong>Selezione una categoria: </strong></td>
 				<td><html:select name="annunciForm"
-						property="categoria.idCategoria">
+						property="idCategoria">
 						<html:optionsCollection name="annunciForm"
 							property="listaCategorie" />
 					</html:select></td>
@@ -29,10 +29,13 @@
 				<td><strong>Stato dell'anuncio: </strong></td>
 			</tr>
 			<tr>
-				<td><html:radio property="stato" value="true"></html:radio>Aperto</td>
+				<td><html:radio property="stato" value="1"></html:radio>Aperto</td>
 			</tr>
 			<tr>
-				<td><html:radio property="stato" value="true"></html:radio>Chiuso</td>
+				<td><html:radio property="stato" value="0"></html:radio>Chiuso</td>
+			</tr>
+			<tr>
+				<td><html:radio property="stato" value="2"></html:radio>Tutti</td>
 			</tr>
 			<tr>
 				<td></td>

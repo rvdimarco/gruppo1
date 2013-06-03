@@ -1,6 +1,5 @@
 package it.geek.annunci.form;
 
-import it.geek.annunci.model.Categoria;
 import it.geek.annunci.model.Prodotto;
 import it.geek.annunci.util.CollezioniFactory;
 
@@ -15,8 +14,8 @@ public class GestioneAnnunciForm extends ActionForm {
 	private String descrizione;
 	private String dataInserimento;
 	private int visite;
-	private int stato;
-	private Categoria categoria = new Categoria();
+	private int stato = 1;
+	private int idCategoria;
 	private Prodotto prodotto = new Prodotto();
 	private int owner;
 	private String method;
@@ -54,11 +53,11 @@ public class GestioneAnnunciForm extends ActionForm {
 	public void setStato(int stato) {
 		this.stato = stato;
 	}
-	public Categoria getCategoria() {
-		return categoria;
+	public int getIdCategoria() {
+		return idCategoria;
 	}
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
+	public void setIdCategoria(int categoria) {
+		this.idCategoria = categoria;
 	}
 	public Prodotto getProdotto() {
 		return prodotto;
@@ -84,5 +83,13 @@ public class GestioneAnnunciForm extends ActionForm {
 	}
 	public void setListaCategorie(List<LabelValueBean> listaCategorie) {
 		this.listaCategorie = listaCategorie;
+	}
+	@Override
+	public String toString() {
+		return "GestioneAnnunciForm [id=" + id + ", descrizione=" + descrizione
+				+ ", dataInserimento=" + dataInserimento + ", visite=" + visite
+				+ ", stato=" + stato + ", categoria=" + idCategoria
+				+ ", prodotto=" + prodotto + ", owner=" + owner + ", method="
+				+ method + ", listaCategorie=" + listaCategorie + "]";
 	}
 }
