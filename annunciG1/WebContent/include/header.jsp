@@ -2,10 +2,10 @@
 
 	<h1>Prezzi Pazzi</h1>
 	
-		Ciao il tuo username è: <strong>${utenteInSessione.username}</strong><br/>
-		il tuo ruolo è: <strong>${utenteInSessione.ruolo.descrizione }</strong>
+		Ciao il tuo username è: <b>${utenteInSessione.username}</b><br/>
+		il tuo ruolo è: <b>${utenteInSessione.ruolo.descrizione }</b>
 	<div align="right">
-		<a href="home.jsp"><strong>HOME</strong></a>
-		<a href="utenti.do?method=esci"><strong>LOGOUT</strong></a>
+		<a class="btn btn-success" href="home.jsp"><i class="icon-home"></i><b> HOME</b></a>
+		<a class="btn btn-danger" href="utenti.do?method=esci"><i class="icon-signout"></i><b> LOGOUT</b></a>
 	</div>
 </center>

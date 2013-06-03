@@ -10,14 +10,12 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Home</title>
 		
-		<!-- import for BOOTSTRAP CSS and JS (minimal) -->
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>	
-		<!-- end import -->
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 		
 	</head>
 	<body>	
-	<table width="100%" border="3" bordercolor="blue">
+	<table width="100%" border="1" bordercolor="blue">
 			<tr height="125">
 				<td align="center" colspan="3"><jsp:include page="include/header.jsp" flush="true" /></td>
 			</tr>

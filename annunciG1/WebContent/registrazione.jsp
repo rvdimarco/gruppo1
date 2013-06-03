@@ -7,11 +7,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
+		
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+		
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Home</title>
 	</head>
 	<body>	
-	<table width="100%" border="3" bordercolor="blue">
+	<table width="100%" border="1" bordercolor="blue">
 			<tr height="125">
 				<td align="center" colspan="3"><jsp:include page="include/header.jsp" flush="true" /></td>
 			</tr>

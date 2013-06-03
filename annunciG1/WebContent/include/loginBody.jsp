@@ -20,7 +20,7 @@ ${messaggio}
 		<div class="control-group">
 			<label class="control-label" for="inputUsername">Username</label>
 			<div class="controls">
-				<input type="text" name="username" placeholder="username">
+				<input type="text" name="username" placeholder="Username">
 			</div>
 		</div>
 		<div class="control-group">
