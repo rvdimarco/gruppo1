@@ -14,20 +14,27 @@
 
 
 ${messaggio}
-<html:form method="post" action="login.do">
-			Username&nbsp;<input type="text" name="username" />
-			Password&nbsp;<input type="password" name="password" />
-	<html:hidden property="method" value="login" />
-	<div class="btn-group">
-		<html:submit styleClass="btn btn-success">Login</html:submit>
+<center><h1><b>Effettua l'accesso!</b></h1></center>
+<form class="form-horizontal" method="post" action="login.do">
+	<div class="well" style="padding: 20px 200px;">
+		<div class="control-group">
+			<label class="control-label" for="inputUsername">Username</label>
+			<div class="controls">
+				<input type="text" name="username" placeholder="username">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Password</label>
+			<div class="controls">
+				<input type="password" name="password" placeholder="Password">
+			</div>
+		</div>
+		<html:hidden property="method" value="login" />
+			<button type="submit" class="btn btn-success">Login!</button>
 	</div>
-</html:form>
-
+</form>
 <html:form method="post" action="utenti.do">
 			e se non sei ancora registrato... 
 			<input type="hidden" name="method" value="inserimento" />
-	<div class="btn-group">
-		<input type="submit" class="btn btn-success">Registrati</input>
-	</div>
+		<button type="submit" class="btn btn-success">Registrati</button>
 </html:form>
-
