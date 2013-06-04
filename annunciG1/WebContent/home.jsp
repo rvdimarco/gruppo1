@@ -8,8 +8,9 @@
 <html>
 	<head>
 	
-		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-		<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+		<!-- import for BOOTSTRAP CSS and JS (minimal) -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<!-- end import -->
 	
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Home</title>

@@ -5,14 +5,6 @@
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<head>
-<!-- import for BOOTSTRAP CSS and JS (minimal) -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<!-- end import -->
-</head>
-
-
 ${messaggio}
 <center><h1><b>Effettua l'accesso!</b></h1></center>
 <form class="form-horizontal" method="post" action="login.do">

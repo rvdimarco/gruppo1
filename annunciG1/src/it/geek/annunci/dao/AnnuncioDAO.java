@@ -38,10 +38,11 @@ public class AnnuncioDAO implements AnnuncioDaoInterface{
 			sb.append("AND stato = ? ");
 			params.add(annuncio.getStato());
 		}
-		if(annuncio.getIdCategoria()==1 || annuncio.getIdCategoria()==2 || annuncio.getIdCategoria()==3 || annuncio.getIdCategoria()==4 || annuncio.getIdCategoria()==5 || annuncio.getIdCategoria()==6){
+		if(annuncio.getIdCategoria()>0){
 			sb.append("AND id_categoria = ? ");
 			params.add(annuncio.getIdCategoria());
 		}
+		
 		
 		log.info("QUERY: " + sb);
 		return jdbcTemplate.query(sb.toString(), params.toArray(), new AnnuncioRowMapper());

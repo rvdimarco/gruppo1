@@ -3,15 +3,8 @@
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<head>
-<!-- import for BOOTSTRAP CSS and JS (minimal) -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<!-- end import -->
-</head>
-
 <center>
-	<strong>REGISTRAZIONE</strong>
+	<b>REGISTRAZIONE</b>
 	<html:form action="utenti.do">
 		<html:hidden property="method" value="eseguiInserimento" />
 		<table>
